@@ -1,0 +1,16 @@
+<form>
+    <fieldset>
+        <legend>Выберите ваше любимое блюдо:</legend>
+        
+        <label for="steak">Стейк</label>
+        <input type="checkbox" id="steak" name="dish" value="steak">
+        
+        <label for="kebab">Шашлык</label>
+        <input type="checkbox" id="kebab" name="dish" value="kebab">
+        
+        <label for="grill">Гриль</label>
+        <input type="checkbox" id="grill" name="dish" value="grill">
+        
+        <!-- If you wish, you can add something here -->
+    </fieldset>
+</form>
