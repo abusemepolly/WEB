@@ -135,3 +135,48 @@ $results = [
 echo "Квадратный корень из 587, округленный в меньшую сторону: " . $results['floor'] . "<br />";
 echo "Квадратный корень из 587, округленный в большую сторону: " . $results['ceil'] . "<br />";
 
+//Работа с min и max
+
+$numbers = [4, -2, 5, 19, -130, 0, 10];
+
+$minNumber = min($numbers);
+$maxNumber = max($numbers);
+
+echo "Минимальное число: $minNumber<br />";
+echo "Максимальное число: $maxNumber<br />";
+
+//Работа с рандомом
+
+$randomNumbers = [];
+
+for ($i = 0; $i < 10; $i++) {
+    $randomNumbers[] = rand(1, 100); // Генерируем случайное число и добавляем его в массив
+}
+
+echo "Массив из 10 случайных чисел: ";
+print_r($randomNumbers); // Выводим массив
+echo "<br />";
+
+//Работа с модулем
+
+$a = 5;
+$b = -3;
+
+$moduleDifference = abs($a - $b);
+echo "Модуль разности $a и $b равен $moduleDifference<br />";
+
+
+$numbers = [1, 2, -1, -2, 3, -3];
+$positiveNumbers = [];
+
+foreach ($numbers as $number) {
+    $positiveNumbers[] = abs($number);
+}
+
+echo "Исходный массив: ";
+print_r($numbers);
+echo "<br />Новый массив с положительными числами: ";
+print_r($positiveNumbers);
+echo "<br />";
+
+
