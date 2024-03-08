@@ -314,6 +314,16 @@ echo "{$user['surname']} {$user['name']} {$user['patronymic']}<br /><br />";
 $date = ['year' => date('Y'), 'month' => date('m'), 'day' => date('d')];
 echo "Текущая дата: {$date['year']}-{$date['month']}-{$date['day']}<br /><br />"; 
 
+$arr = ['a', 'b', 'c', 'd', 'e'];
+echo count($arr); // Выведет количество элементов массива
+echo "<br />";
+
+echo end($arr); // Выведет последний элемент массива
+echo "<br />";
+
+// Предпоследний элемент можно получить, отняв один от общего количества элементов массива
+echo $arr[count($arr) - 2]; // Выведет предпоследний элемент массива
+
 
 
 
