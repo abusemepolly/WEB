@@ -370,3 +370,35 @@ if (count($arr) === 3) {
 for ($i = 1; $i <= 20; $i++) {
     echo str_repeat('x', $i) . "<br />";
 }
+
+
+//Task 20
+
+// Среднее арифметическое элементов массива
+$numbers = [1, 2, 3, 4, 5];
+$average = array_sum($numbers) / count($numbers);
+echo "Среднее арифметическое: $average<br /><br />";
+
+// Сумма чисел от 1 до 100
+$sum = array_sum(range(1, 100));
+echo "Сумма чисел от 1 до 100: $sum<br /><br />";
+
+// Массив с квадратными корнями чисел
+$numbers = [1, 4, 9, 16, 25];
+$squareRoots = array_map('sqrt', $numbers);
+echo "Массив квадратных корней: ";
+print_r($squareRoots);
+echo "<br /><br />";
+
+// Массив с числами и ключами как буквы алфавита
+$alphabet = range('a', 'z');
+$numbers = range(1, 26);
+$combined = array_combine($alphabet, $numbers);
+echo "Массив с ключами алфавита: ";
+print_r($combined);
+echo "<br /><br />";
+
+// Сумма пар чисел в строке
+$str = '1234567890';
+$sumPairs = (int)($str[0].$str[1]) + (int)($str[2].$str[3]) + (int)($str[4].$str[5]) + (int)($str[6].$str[7]) + (int)($str[8].$str[9]);
+echo "Сумма пар чисел: $sumPairs<br />";
