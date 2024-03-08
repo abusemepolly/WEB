@@ -361,6 +361,12 @@ echo "<br />";
 $arr = [1, 2, 3]; 
 if (count($arr) === 3) {
     echo array_sum($arr);
+    echo "<br>";
 }
 
 
+//Task 19
+
+for ($i = 1; $i <= 20; $i++) {
+    echo str_repeat('x', $i) . "<br />";
+}
