@@ -325,5 +325,42 @@ echo "<br />";
 echo $arr[count($arr) - 2]; // Выведет предпоследний элемент массива
 
 
+//Task 18 
+
+function isSumGreaterThanTen($num1, $num2) {
+    return ($num1 + $num2) > 10;
+}
+
+var_dump(isSumGreaterThanTen(5, 6)); // true
+var_dump(isSumGreaterThanTen(4, 5)); // false
+
+function areNumbersEqual($num1, $num2) {
+    return $num1 === $num2;
+}
+
+var_dump(areNumbersEqual(10, 10)); // true
+var_dump(areNumbersEqual(10, 11)); // false
+
+
+// Сокращенное условие
+$test = 0; // Значение переменной для проверки
+echo $test == 0 ? 'верно' : '';
+echo "<br />";
+
+// Условие с диапазоном чисел
+$age = 25; // Значение переменной для проверки
+if ($age < 10 || $age > 99) {
+    echo 'Число меньше 10 или больше 99';
+} else {
+    $sum = array_sum(str_split((string)$age));
+    echo $sum < 10 ? 'Сумма цифр однозначна' : 'Сумма цифр двузначна';
+}
+echo "<br />";
+
+// Условие для массива с тремя элементами
+$arr = [1, 2, 3]; 
+if (count($arr) === 3) {
+    echo array_sum($arr);
+}
 
 
