@@ -97,3 +97,41 @@ $sumOfSquares = 0;
 foreach ($elements as $element) {
     $sumOfSquares += pow($element, 2); // Суммируем квадраты элементов
 }
+
+$sqrtSum = sqrt($sumOfSquares);
+echo "Корень из суммы квадратов элементов массива равен $sqrtSum<br />";
+
+//Работа с функциями округления
+
+$sqrt379 = sqrt(379);
+
+// Округление до целых
+$roundToInt = round($sqrt379);
+echo "Квадратный корень из 379, округленный до целых: $roundToInt<br />";
+
+// Округление до десятых
+$roundToTenths = round($sqrt379, 1);
+echo "Квадратный корень из 379, округленный до десятых: $roundToTenths<br />";
+
+// Округление до сотых
+$roundToHundredths = round($sqrt379, 2);
+echo "Квадратный корень из 379, округленный до сотых: $roundToHundredths<br />";
+
+
+$sqrt587 = sqrt(587);
+
+// Округление в меньшую сторону
+$floorValue = floor($sqrt587);
+
+// Округление в большую сторону
+$ceilValue = ceil($sqrt587);
+
+// Сохраняем результаты в ассоциативный массив
+$results = [
+    'floor' => $floorValue,
+    'ceil' => $ceilValue,
+];
+
+echo "Квадратный корень из 587, округленный в меньшую сторону: " . $results['floor'] . "<br />";
+echo "Квадратный корень из 587, округленный в большую сторону: " . $results['ceil'] . "<br />";
+
