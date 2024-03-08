@@ -210,11 +210,59 @@ echo "Нужно сложить первых $count элементов масс�
 
 
 //Task15
+
 function printStringReturnNumber() {
     echo "Строка с очень важным содержанием. С 8 марта, прекрасные дамы!<br />"; // Печать строки
     return 80324; // Возврат числового значения
 }
 
 $my_num = printStringReturnNumber(); // Вызов функции и сохранение возвращаемого значения в переменную
-echo $my_num; // Вывод значения переменной
+echo $my_num . <br />; // Вывод значения переменной
+
+
+//Task 16
+
+function increaseEnthusiasm($str) {
+    return $str . "!";
+}
+
+function repeatThreeTimes($str) {
+    return $str . $str . $str;
+}
+
+echo increaseEnthusiasm("Я люблю всех вокруг, кроме тех, кого не люблю") . "<br />";
+
+echo repeatThreeTimes("WEB") . "<br />";
+
+echo increaseEnthusiasm(repeatThreeTimes("Ура")) . "<br />";
+
+function cut($str, $length = 10) {
+    return mb_substr($str, 0, $length);
+}
+
+echo cut("Hello, world!", 5) . "<br />";
+echo cut("Hello, world!") . "<br />";
+
+function printArrayRecursively($arr, $index = 0) {
+    if ($index < count($arr)) {
+        echo $arr[$index] . "<br />";
+        printArrayRecursively($arr, $index + 1);
+    }
+}
+
+$numbers = [1, 2, 3, 4, 5];
+printArrayRecursively($numbers);
+
+function sumDigitsUntilSingleDigit($number) {
+    $sum = array_sum(str_split($number));
+    if ($sum > 9) {
+        return sumDigitsUntilSingleDigit($sum);
+    } else {
+        return $sum;
+    }
+}
+
+echo sumDigitsUntilSingleDigit(987) . "<br />"; 
+
+
 
