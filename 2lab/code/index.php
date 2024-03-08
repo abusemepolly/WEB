@@ -209,7 +209,7 @@ foreach ($numbers as $number) {
 echo "Нужно сложить первых $count элементов массива, чтобы сумма получилась больше 10. <br />";
 
 
-//Task15
+//Task 15
 
 function printStringReturnNumber() {
     echo "Строка с очень важным содержанием. С 8 марта, прекрасные дамы!<br />"; // Печать строки
@@ -263,6 +263,57 @@ function sumDigitsUntilSingleDigit($number) {
 }
 
 echo sumDigitsUntilSingleDigit(987) . "<br />"; 
+
+
+//Task 17
+
+// Заполнение массива строками 'x', 'xx', 'xxx', ...
+$array = [];
+for ($i = 1; $i <= 5; $i++) {
+    $array[] = str_repeat('x', $i);
+}
+print_r($array);
+echo "<br /><br />";
+
+// Функция arrayFill
+function arrayFill($value, $count) {
+    return array_fill(0, $count, $value);
+}
+print_r(arrayFill('x', 5));
+echo "<br /><br />";
+
+// Сумма элементов двухмерного массива
+$numbers = [[1, 2, 3], [4, 5], [6]];
+$sum = 0;
+foreach ($numbers as $part) {
+    $sum += array_sum($part);
+}
+echo "Сумма элементов массива: $sum<br /><br />";
+
+// Создание двухмерного массива с циклами
+$array = [];
+$value = 1;
+for ($i = 0; $i < 3; $i++) {
+    for ($j = 0; $j < 3; $j++) {
+        $array[$i][$j] = $value++;
+    }
+}
+print_r($array);
+echo "<br /><br />";
+
+// Математические операции с элементами массива
+$elements = [2, 5, 3, 9];
+$result = $elements[0] * $elements[1] + $elements[2] * $elements[3];
+echo "Результат: $result<br /><br />";
+
+// Вывод данных из ассоциативного массива
+$user = ['name' => 'Иван', 'surname' => 'Иванов', 'patronymic' => 'Иванович'];
+echo "{$user['surname']} {$user['name']} {$user['patronymic']}<br /><br />";
+
+// Вывод текущей даты из массива
+$date = ['year' => date('Y'), 'month' => date('m'), 'day' => date('d')];
+echo "Текущая дата: {$date['year']}-{$date['month']}-{$date['day']}<br /><br />"; 
+
 
 
 
