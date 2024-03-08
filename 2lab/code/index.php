@@ -83,3 +83,17 @@ if ($a % $b == 0) {
     echo "Делится с остатком. Остаток от деления: $remainder<br />";
 }
 
+//Работа со степенью и корнем
+
+$st = pow(2, 10);
+echo "2 в 10 степени равно $st<br />";
+
+$sqrt = sqrt(245);
+echo "Квадратный корень из 245 равен $sqrt<br />";
+
+$elements = [4, 2, 5, 19, 13, 0, 10];
+$sumOfSquares = 0;
+
+foreach ($elements as $element) {
+    $sumOfSquares += pow($element, 2); // Суммируем квадраты элементов
+}
