@@ -217,7 +217,7 @@ function printStringReturnNumber() {
 }
 
 $my_num = printStringReturnNumber(); // Вызов функции и сохранение возвращаемого значения в переменную
-echo $my_num . <br />; // Вывод значения переменной
+echo $my_num . "<br />"; // Вывод значения переменной
 
 
 //Task 16
